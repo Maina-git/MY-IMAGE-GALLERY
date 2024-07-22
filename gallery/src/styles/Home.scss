@@ -1,0 +1,121 @@
+@import "../Variables.scss";
+@import "../styles/Mixins.scss";
+
+.home{
+    height:100vh;
+    flex:100%;
+    background:$background;
+    overflow-y: scroll;
+
+ 
+
+    nav{
+        flex:100%;
+        height:80px;
+        background:$navbar;
+        display:flex;
+        justify-content:space-between;
+
+
+        @include respond(phone){
+ height:60px;
+        }
+        
+
+        .img{
+            background:$fadeblue;
+            margin:10px;
+            border:3px solid $background;
+            color:$white;
+            outline:none;
+            max-width:max-content;
+            height:30px;
+            border-radius:10px;
+            padding:10px;
+            cursor:pointer;
+
+            @include respond(phone){
+     height:20px;
+     padding:5px;
+     width:200px;
+            }
+            
+        }
+        button{
+            height:40px;
+            padding:0 20px;
+            margin:15px 40px;
+            background:$fadeblue;
+            color:$white;
+            font-size:10px;
+            border:0;
+            outline:none;
+            cursor:pointer;
+            border-radius:10px;
+
+            @include respond(phone){
+           padding:0 10px;
+           margin:10px;
+            }
+            
+
+
+        }
+button:hover{
+    background:none;
+    border:1px solid white;
+}
+
+
+.Logout{
+    background:none;
+    color:white;
+    font-size:20px;
+}
+.Logout:hover{
+    opacity: 0.6;
+    border:none;
+}
+
+    }
+    .images{
+        display:grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        justify-content:center;
+        place-items:center;
+        align-items:center;
+
+
+        @include respond(tab-port){
+grid-template-columns: 1fr 1fr;
+        }
+        
+
+        @include respond(phone){
+  grid-template-columns: 1fr;
+        }
+        
+
+
+       .img{
+        width:300px;
+        height:300px;
+        background-size:cover;
+        background-position:center;
+        margin:20px 0;
+        border:2px solid $yellow;
+
+        @include respond(tab-port){
+width:200px;
+height:200px;
+        }
+        @include respond(phone){
+width:350px;
+height:350px;
+
+        }
+
+       }
+    }
+
+}

@@ -1,0 +1,59 @@
+@import "../Variables.scss";
+@import "../styles/Mixins.scss";
+
+
+.login{
+    display:flex;
+    flex-direction:column;
+    gap:40px;
+    place-items:center;
+    justify-content:center;
+    background:$background;
+    height:100vh;
+
+    .userInfo{
+display:flex;
+flex-direction:column;
+place-items:center;
+
+h1{
+    font-size:50px;
+    font-family:sans-serif;
+    color:$yellow;
+
+    @include respond(phone){
+font-size:25px;
+    }
+
+    @include respond(tab-land){
+font-size:25px;
+    }
+}
+
+.gallery{
+    font-size:200px;
+    @include respond(phone){
+ font-size:100px;
+    }
+}
+    }
+
+    p{
+    font-size:20px;
+    font-family:sans-serif;
+    color:$white;
+}
+
+.btn{
+    padding:10px 30px;
+    border:0;
+    outline:none;
+    font-size:15px;
+  display:flex;
+  gap:10px;
+  border-radius:20px;
+  outline:none;
+  cursor:pointer;
+  color:$background;
+}
+}
